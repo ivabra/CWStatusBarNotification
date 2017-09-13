@@ -185,7 +185,7 @@ public class CWStatusBarNotification : NSObject {
     
     // MARK: - screen orientation change
     
-    func updateStatusBarFrame() {
+    @objc func updateStatusBarFrame() {
         if let view = self.isCustomView ? self.customView :
             self.notificationLabel {
                 view.frame = self.getNotificationLabelFrame()
@@ -197,7 +197,7 @@ public class CWStatusBarNotification : NSObject {
     
     // MARK: - on tap
     
-    func notificationTapped(recognizer : UITapGestureRecognizer) {
+    @objc func notificationTapped(recognizer : UITapGestureRecognizer) {
         self.notificationTappedClosure()
     }
     

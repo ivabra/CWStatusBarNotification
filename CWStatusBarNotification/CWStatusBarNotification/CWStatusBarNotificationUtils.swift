@@ -74,7 +74,7 @@ public class ScrollLabel : UILabel {
             return 0.0
         }
         let size = NSString(string: content).size(
-            attributes: [NSFontAttributeName: self.font])
+            withAttributes: [NSAttributedStringKey.font: self.font])
         return size.width
     }
     
